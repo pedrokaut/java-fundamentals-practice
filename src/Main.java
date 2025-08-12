@@ -7,11 +7,14 @@ public class Main {
         System.out.print("Hello and welcome!");
         int idade = 20;
 
-        for (int i = 1; i <= 10; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+         String nome = "pedro";
+        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
             System.out.println("idade = " + idade);
+            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("nome =" + nome);
+            System.out.println("i = " + i);
         }
     }
 }
