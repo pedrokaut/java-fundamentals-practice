@@ -1,20 +1,29 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
-        int idade = 20;
+    public static void main(String[] args) throws java.io.IOException {
+        String[] nomes = new String[10];
+        int[] idades = new int[10];
 
-         String nome = "pedro";
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            System.out.println("idade = " + idade);
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Digite o nome da pessoa " + (i + 1) + ": ");
+            nomes[i] = lerLinha();
 
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("nome =" + nome);
-            System.out.println("i = " + i);
+            System.out.print("Digite a idade de " + nomes[i] + ": ");
+            idades[i] = Integer.parseInt(lerLinha());
         }
+
+        System.out.println("\nLista de Dados");
+        for (int i = 0; i < 10; i++) {
+            System.out.println((i + 1) + " - " + nomes[i] + " tem " + idades[i] + " anos.");
+        }
+    }
+
+
+    public static String lerLinha() throws java.io.IOException {
+        StringBuilder sb = new StringBuilder();
+        int c;
+        while ((c = System.in.read()) != -1 && c != '\n' && c != '\r') {
+            sb.append((char) c);
+        }
+        return sb.toString();
     }
 }
