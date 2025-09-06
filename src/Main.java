@@ -19,6 +19,7 @@ public class Main {
 
         etqmedio = (qmax + qmin) / 2;
         System.out.println("O estoque médio é: " + etqmedio);
+        input.close();
     }
 
     public static void questao2() {
@@ -33,6 +34,7 @@ public class Main {
 
         valorReal = valorDolar * cotacao;
         System.out.println("O valor em reais é: " + valorReal);
+        input.close();
     }
     public static void questao3() {
         Scanner input = new Scanner(System.in);
@@ -224,6 +226,7 @@ public class Main {
         a=b;
         b=temp;
         System.out.println("valores depois da troca: "+ a+" e "+ b);
+        input.close();
     }
     public static void questao12() {
         Scanner input = new Scanner(System.in);
@@ -254,7 +257,7 @@ public class Main {
             numeros[i] = input.nextInt();
         }
 
-        input.close();
+
 
 
         Arrays.sort(numeros);
@@ -271,6 +274,7 @@ public class Main {
             System.out.print(numeros[i] + " ");
         }
         System.out.println();
+        input.close();
     }
     public static void questao14() {
         Scanner input = new Scanner(System.in);
