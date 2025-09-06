@@ -136,8 +136,90 @@ public class Main {
 
         input.close();
     }
+    public static void questao8() {
+        Scanner input = new Scanner(System.in);
+
+        double volume, raio, altura;
+        final double PI = 3.14159;
+
+        System.out.print("Digite o raio da lata de óleo: ");
+        raio = input.nextDouble();
+
+        System.out.print("Digite a altura da lata de óleo: ");
+        altura = input.nextDouble();
+
+        volume = PI * raio * raio * altura;
+
+        System.out.println("O volume da lata de óleo é: " + volume);
+
+        input.close();
+    }
+    public static void questao9() {
+        Scanner input = new Scanner(System.in);
+
+        int anos, meses, dias, idademdias;
+
+        System.out.print("Digite sua idade em anos: ");
+        anos = input.nextInt();
+
+        System.out.print("Digite os meses: ");
+        meses = input.nextInt();
+
+        System.out.print("Digite os dias: ");
+        dias = input.nextInt();
+
+        idademdias = (anos * 365) + (meses * 30) + dias;
+
+        System.out.println("A idade em dias é: " + idademdias);
+
+        input.close();
+    }
+    public static void questao10() {
+        Scanner input = new Scanner(System.in);
+
+        int n1, n2;
+        System.out.print("Digite o primeiro número: ");
+        n1 = input.nextInt();
+
+        System.out.print("Digite o segundo número: ");
+        n2 = input.nextInt();
+
+        System.out.println("\nrelacionamentos em ordem");
+
+        if (n1 == n2) {
+            System.out.println(n1 + " é igual a " + n2);
+        } else {
+            System.out.println(n1 + " é diferente de " + n2);
+        }
+        if (n1 > n2) {
+            System.out.println(n1 + " é maior que " + n2);
+        } else if (n1 < n2) {
+            System.out.println(n1 + " é menor que " + n2);
+        }
+        if (n1 >= n2) {
+            System.out.println(n1 + " é maior ou igual a " + n2);
+        } else {
+            System.out.println(n1 + " é menor ou igual a " + n2);
+        }
+
+        input.close();
+    }
+    /// NIVEL 2
+    public static void questao11() {
+        Scanner input = new Scanner(System.in);
+        int a,b,temp;
+        System.out.println("Digite o valor de A: ");
+        a = input.nextInt();
+        System.out.println("Digite o valor de B: ");
+        b = input.nextInt();
+        System.out.println("valores antes da troca: "+ a +" e "+ b);
+        temp=a;
+        a=b;
+        b=temp;
+        System.out.println("valores depois da troca: "+ a+" e "+ b);
+    }
     public static void main(String[] args) {
 
-        questao6();
+        questao11();
     }
 }
